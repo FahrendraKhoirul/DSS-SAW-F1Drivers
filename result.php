@@ -191,7 +191,7 @@
           $no = 1;
           $kat = mysqli_query($conn, "SELECT id_alternatif, nm_alternatif,
           SUM(prarangking) AS rangking FROM vprarangking 
-          GROUP BY id_alternatif 
+          GROUP BY id_alternatif ORDER BY rangking DESC
             ");
           while ($p = mysqli_fetch_array($kat)) {
 
